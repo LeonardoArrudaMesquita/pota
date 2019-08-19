@@ -38,19 +38,22 @@ public class Recursividade {
                 case 2:                    
                     System.out.println("Digite o fatorial: ");
                     System.out.println("Fatorial: " + fatorial(sc.nextInt()));
-                
+                    break;
                 case 3:
                     System.out.println("Digite o nº termo: ");
                     System.out.println("Fibonacci: " + fibonacci(sc.nextInt()));
-
+                    break;
                 case 4:
                     System.out.println("Digite o tamanho do Array: ");
                     System.out.println("Maior elemento: " + maiorElemento(sc.nextInt()));
-
-                // Sair
+                    break;                
+                case 7:
+                    System.out.println("Digite o tamanho do Array: ");
+                    System.out.println("Soma dos elementos: " + somaArray(sc.nextInt()));
+                    break;
                 case 0:                
                     System.out.println("Saindo...");
-
+                    break;
                 default:
                     break;                
             }
@@ -107,6 +110,8 @@ public class Recursividade {
         return soma + ", " + fibonacci(n - 1); 
     }
     
+    
+
     // Exercício 4
     public static int maiorElemento(int tamanho){        
 
@@ -118,5 +123,22 @@ public class Recursividade {
             }
        }
 
+    }
+
+    static int[] arr2;
+
+    // Exercício 7
+    public static int somaArray(int tamanho){
+
+        arr2 = new int[tamanho];
+
+        if (arr2[arr2.length] != ) {
+            System.out.println("Digite os elementos do Array: ");
+            for (int i = 0; i < tamanho; i++) {
+                arr2[i] = sc.nextInt();
+            }
+        }        
+
+        return arr2[tamanho - 1] + somaArray(tamanho);
     }
 }
